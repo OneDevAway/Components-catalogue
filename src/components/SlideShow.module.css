@@ -1,0 +1,98 @@
+/* slideshow.module.css */
+
+.slideshow {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.prevButton {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.nextButton {
+  position: absolute;
+  top: 50%;
+  right: 3.4rem;
+  transform: translate(50%, -50%);
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.slideshow:hover .autoplayButton {
+  display: block;
+}
+
+.autoplayButton {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+background-color: transparent;
+border: 0;
+  display: none;
+}
+
+.prevButton:hover svg,
+.nextButton:hover svg,
+.autoplayButton:hover svg {
+  transform: scale(1.2);
+}
+
+.thumbnailContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 0;
+}
+
+.thumbnail {
+  width: 40px;
+  height: 30px;
+  object-fit: cover;
+  margin: 0 4px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.activeThumbnail {
+  border-color: #fff;
+}
+.slideshow:hover .deleteImage {
+  display: block;
+}
+.deleteImage {
+  background-color: transparent;
+  position: absolute;
+  display: none;
+  justify-self: flex-end;
+  margin: 1rem;
+  border: none;
+  color: black;
+  height: 1rem;
+  cursor: pointer;
+}
+.deleteImage:hover {
+  transform: scale(1.2);
+}
